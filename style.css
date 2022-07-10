@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+  border: none;
+  outline: none;
+}
+
+:root {
+  --Very_Dark_Gray: hsl(0, 0%, 17%);
+  --Dark_Gray: hsl(0, 0%, 59%);
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+header {
+  height: 30vh;
+  background: url(./images/pattern-bg.png) no-repeat;
+  background-position: center 0;
+  background-size: cover;
+  text-align: center;
+}
+
+header h1 {
+  padding-top: 30px;
+  color: white;
+  font-weight: 500;
+}
+
+form {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  height: 60px;
+  border-radius: 20px;
+  background: white;
+  position: relative;
+  overflow: hidden;
+}
+
+#input {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  width: 70%;
+  background: none;
+}
+
+#input[type="text"] {
+  font-size: 1.1rem;
+}
+
+#submit {
+  position: absolute;
+  right: -2px;
+  top: -10px;
+  width: 20%;
+  height: 80px;
+  background: var(--Very_Dark_Gray);
+  color: white;
+  font-size: 1.5rem;
+}
+
+.ip-tracker {
+  position: relative;
+  z-index: 1;
+}
+
+.ip-tracker-details {
+  background: white;
+  box-shadow: 0 0 50px var(--Dark_Gray);
+  border-radius: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  position: relative;
+  position: absolute;
+  width: 100%;
+}
+
+.ip-tracker-details p {
+  letter-spacing: 2px;
+  color: var(--Dark_Gray);
+}
+
+.ip-tracker-details h1 {
+  color: var(--Very_Dark_Gray);
+  padding: 0;
+}
+
+.ip-address,
+.ip-location,
+.ip-timezone {
+  padding-bottom: 20px;
+}
+
+.map-section {
+  position: relative;
+  z-index: 0;
+}
+
+#map {
+  height: 70vh;
+}
+
+@media only screen and (min-width: 700px) {
+  .container {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .container {
+    width: 900px;
+  }
+
+  header {
+    height: 40vh;
+  }
+
+  #map {
+    height: 60vh;
+  }
+
+  header h1 {
+    padding-bottom: 30px;
+  }
+
+  form {
+    width: 500px;
+    margin: auto;
+  }
+
+  .ip-tracker {
+    padding-top: 30px;
+  }
+
+  .ip-tracker-details {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  hr {
+    border: 1px solid rgb(196, 194, 194);
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .container {
+    width: 1000px;
+  }
+
+  header {
+    height: 35vh;
+  }
+
+  #map {
+    height: 65vh;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .container {
+    width: 1300px;
+  }
+
+  main {
+    width: 1500px;
+    margin: auto;
+  }
+}
